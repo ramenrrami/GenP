@@ -95,7 +95,7 @@ def _asset_base():
 GENP_DIR = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else None
     GENP_DIR = os.path.dirname(os.path.abspath(__file__))
 DOWNLOADS_DIR = os.environ.get('GENP_DOWNLOADS_DIR') or os.path.join(GENP_DIR, 'Adobe Downloads')
-INSTALLER_URL = 'http://140.238.101.171:8080/ipfs/Qmats5TrRsNusURHj1MmogCVZPUkbe6uHAvqjjGJXM3hUq?filename=installer.zip&download=true'
+INSTALLER_URL = ''
 INSTALLER_CACHE = os.path.join(DOWNLOADS_DIR, '_installer')
 DRIVER_XML = '<DriverInfo>\n    <ProductInfo>\n        <Name>Adobe {name}</Name>\n        <SAPCode>{sapCode}</SAPCode>\n        <CodexVersion>{version}</CodexVersion>\n        <Platform>{installPlatform}</Platform>\n        <EsdDirectory>./{sapCode}</EsdDirectory>\n        <Dependencies>\n{dependencies}\n        </Dependencies>\n    </ProductInfo>\n    <RequestInfo>\n        <InstallDir>C:\\Program Files\\Adobe</InstallDir>\n        <InstallLanguage>{language}</InstallLanguage>\n    </RequestInfo>\n</DriverInfo>\n'
 DRIVER_XML_DEPENDENCY = '         <Dependency>\n                <SAPCode>{sapCode}</SAPCode>\n                <BaseVersion>{version}</BaseVersion>\n                <EsdDirectory>./{sapCode}</EsdDirectory>\n            </Dependency>'
